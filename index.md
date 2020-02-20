@@ -1,0 +1,5 @@
+---
+layout: home
+title: Home
+---
+<h1>Welcome!</h1>
