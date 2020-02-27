@@ -5,7 +5,7 @@ description: My first playable jam game, entirely made by my own hands in C# wit
 thumbnail: attribute_cover.png
 thumbnail-alt: "[attribute]"
 thumbnail-size: "200px"
-tags: personnal-project game game-jam csharp
+tags: personal-project game game-jam csharp
 ---
 # About [[attribute]](https://debiantarte.itch.io/attribute)
 

@@ -15,8 +15,12 @@
                   </div>
                   <div class="post-meta">
                     <ul>
-                    {% for tag in page.tags %}  
-                        <li><a href="{{ '/tags/' | append: tag | relative_url }}">{{ tag }}</a></li>
+                    {% for stag in site.tags %}
+                        {% for tag in page.tags %}
+                            {% if tag == stag.tag %}
+                            <li><a href="{{ '/tags/' | append: tag | relative_url }}">{{ stag.name }}</a></li>
+                            {% endif %}
+                        {% endfor %}
                     {% endfor %}
                     </ul>
                   </div>
