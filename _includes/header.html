@@ -52,9 +52,10 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                {% for item in site.data.navigation %}
-                    <a href="{{ item.link }}" class="nav-item nav-link">{{ item.name }}</a>
-                {% endfor %}
+                {% comment %}{% raw %}{% for item in site.data.navigation %}{% endraw %}{% endcomment %}
+                    <!--<a href="{{ item.link }}" class="nav-item nav-link">{{ item.name }}</a>-->
+                {% include navigation.html %}                
+                {% comment %}{% raw %}{% endfor %}{% endraw %}{% endcomment %}
                 <!--
                 <a class="nav-item nav-link" href="{{ '' | relative_url }}/">/home</a>
                 <a class="nav-item nav-link" href="{{ 'archive' | relative_url }}">/archive</a>

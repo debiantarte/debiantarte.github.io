@@ -1,0 +1,8 @@
+- name: french
+  link: /fr
+  lang: fr
+  symbol: FR
+- name: english
+  link: /
+  lang: en
+  symbol: EN

@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "HAVRES"
+lang: en
+ref: havres
 thumbnail: havres_cover.jpg
 thumbnail-alt: HAVRES
 thumbnail-size: "100%"

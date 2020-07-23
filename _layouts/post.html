@@ -16,11 +16,9 @@
                   <div class="post-meta">
                     <ul>
                     {% for stag in site.tags %}
-                        {% for tag in page.tags %}
-                            {% if tag == stag.tag %}
-                            <li><a href="{{ '/tags/' | append: tag | relative_url }}">{{ stag.name }}</a></li>
-                            {% endif %}
-                        {% endfor %}
+                      {% if page.tags contains stag.tag %}
+                        <li><a href="{{ '/tags/' | append: tag | relative_url }}">{{ stag.name }}</a></li>
+                      {% endif %}
                     {% endfor %}
                     </ul>
                   </div>
@@ -31,12 +29,6 @@
                     {{ content }}
                     {% include share.html %}
                   </div>
-                  {% if page.comments %}
-                  <div id="disqus_thread">
-                    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-                  </div>
-                  {% endif %}
                 </div>
               </div>
             </div>

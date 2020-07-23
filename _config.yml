@@ -29,6 +29,7 @@ github_username: debiantarte
 
 # Build settings
 markdown: kramdown
+lang: en
 
 # Theme settings (thanks to https://github.com/streetturtle/jekyll-clean-dark)
 comments: false

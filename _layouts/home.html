@@ -4,7 +4,8 @@ layout: page
 
 {{ content }}
 
-{% for project in site.projects limit:10 %}
+{% assign projects=site.projects | where:"lang", page.lang %}
+{% for project in projects  %}
 <div class="mb-2 rounded" style="padding: 0px 10px 10px 10px; background-color: #44444F;">
     <h2 class="post-title">
         <a href="{{ project.url | relative_url }}">
@@ -13,7 +14,6 @@ layout: page
     </h2>
 
     <div class="post-descr row">
-        <!--<img src="{{ project.image }}" class="img-fluid rounded float-left" style="margin-right: 10px; max-width: 25%; height: 25%"></img>-->
         <div class="col-3">
         {% if project.thumbnail %}
             {% include post-thumbnail.html image=project.thumbnail alt=project.thumbnail-alt size="100px" margin="10px" %}        
@@ -27,21 +27,11 @@ layout: page
     <div class="post-meta">
         <ul>
             {% for stag in site.tags %}
-                {% for tag in project.tags %}
-                    {% if tag == stag.tag %}
-                    <li><a href="{{ '/tags/' | append: tag | relative_url }}">{{ stag.name }}</a></li>
+                    {% if project.lang == stag.lang and project.tags contains stag.tag %}
+                        <li><a href="{{ stag.url }}">{{ stag.name }}</a></li>
                     {% endif %}
-                {% endfor %}
             {% endfor %}
         </ul>
     </div>
 </div>
 {% endfor %}
-
-<!--
-<div class="post-footer">
-    <div class="column-full">
-        <h3><a href="{{ 'archive' | relative_url }}">Blog archive</a></h3>
-    </div>
-</div>
--->

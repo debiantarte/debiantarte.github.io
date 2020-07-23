@@ -1,7 +1,11 @@
-<nav>
-	{% for item in site.data.navigation %}
-		<a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>
-			{{ item.name }}
-		</a>
-	{% endfor %}
-</nav>
+
+{% for lang in site.data.langs %}
+    {% if lang.lang != page.lang %}
+        <a href="{{ lang.link }}" class="nav-item nav-link"> {{ lang.symbol }} </a>
+    {% endif %}
+{% endfor %}
+
+{% for item in site.data.navigation %}
+	<a href="{{ item.link }}" class="nav-item nav-link" {% if item.link == page.url %}id="current"{% endif %}> {{ item.name }} </a>
+{% endfor %}
+
