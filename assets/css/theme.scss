@@ -34,6 +34,8 @@ $note-color: #87CEFA;
 $warning-color: #ffff00;
 // use this or pick any from /css/pics/background folder or from transparenttextures.com
 $background-pattern: 'random-grey-variations.png';
+$nav-background-color: #222;
+
 
 //********************************************************
 //                  Common styles
@@ -254,7 +256,7 @@ blockquote.warning p{
 //                    Header
 //********************************************************
 nav {
-  background-color: #222;
+  background-color: $nav-background-color;
   border-color: #080808;
   font-size: 18px;
   font-family: "Ubuntu", sans-serif;
@@ -285,6 +287,24 @@ nav {
   .shrink .navbar-toggler {
     padding: 4px 5px;
     margin: 8px 15px 8px 0;
+  }
+  #current {
+    color: green;
+  }
+  .dropdown {
+    float: left;
+    //overflow: hidden;
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: $nav-background-color;
+      min-width: 4vw;
+      //box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    &:hover .dropdown-content {
+      display: block;
+    }
   }
 }
 

@@ -2,7 +2,9 @@
   link: /fr
   lang: fr
   symbol: FR
+  welcome: Bienvenue !
 - name: english
   link: /
   lang: en
   symbol: EN
+  welcome: Welcome!

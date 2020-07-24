@@ -2,6 +2,12 @@
 layout: page
 ---
 
+{% for lang in site.data.langs %}
+    {% if lang.lang == page.lang %}
+        <h1>{{ lang.welcome }}</h1>
+    {% endif %}
+{% endfor %}
+
 {{ content }}
 
 {% assign projects=site.projects | where:"lang", page.lang %}
