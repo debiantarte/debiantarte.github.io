@@ -4,14 +4,4 @@ title: Accueil
 lang: fr
 ref: home
 ---
-<script type="text/javascript">
-    var userLang = navigator.language || navigator.userLanguage;
-    alert("plop"); 
-   {% for lang in site.data.langs %}
-    if (userLang.split(2).toLowerCase() == "{{ lang.lang }}") {
-        //window.location.replace({{ site.baseurl }} + {{ lang.link }});
-        alert({{ site.baseurl }} + {{ lang.link }});
-    }
-    {% endfor %}
-</script>
-
+Version Française

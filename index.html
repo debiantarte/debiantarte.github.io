@@ -6,12 +6,11 @@ ref: home
 ---
 
 <script type="text/javascript">
-    var userLang = navigator.language || navigator.userLanguage;
-    alert("plop");
+    var userLang = navigator.language;
+    window.location.replace("{{ site.url }}" + "/en");
     {% for lang in site.data.langs %}
-    if (userLang.split(2).toLowerCase() == "{{ lang.lang }}") {
-        //window.location.replace({{ site.baseurl }} + {{ lang.link }});
-        alert({{ site.baseurl }} + {{ lang.link }});
+    if (userLang.includes("{{ lang.lang }}")) {
+        window.location.replace("{{ site.url }}" + "{{ lang.link }}");
     }    
     {% endfor %}
 </script>
