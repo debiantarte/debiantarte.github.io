@@ -16,8 +16,8 @@
                   <div class="post-meta">
                     <ul>
                     {% for stag in site.tags %}
-                      {% if page.tags contains stag.tag %}
-                        <li><a href="{{ '/tags/' | append: tag | relative_url }}">{{ stag.name }}</a></li>
+                      {% if page.tags contains stag.tag and page.lang == stag.lang %}
+                        <li><a href="{{ stag.url }}">{{ stag.name }}</a></li>
                       {% endif %}
                     {% endfor %}
                     </ul>

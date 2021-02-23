@@ -1,0 +1,25 @@
+---
+layout: tag_index
+lang: en
+---
+
+{% for tag in site.data.tags %}
+	{{ tag.name }}
+{% endfor %}
+
+<!--
+<div class="post">
+  <h2 class="post_title">{{page.name}}</h2>
+  <ul>
+
+    {% for project in site.projects %}
+    {% if project.tags contains page.tag and project.lang == page.lang %}
+        <li class="archive_list">
+          <a class="archive_list_article_link" href='{{ project.url | relative_url }}'>{{project.title}}</a>
+          <p>{{project.description}}</p>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>
+-->

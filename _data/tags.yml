@@ -1,0 +1,22 @@
+- name : cpp
+  fr : C++
+  en : C++
+- name : csharp
+  fr : C#
+  en : C#
+- name : vr
+  fr : RV
+  en : VR
+- name : game
+  fr : Jeu
+  en : Game
+- name : gamejam
+  fr : Game Jam
+  en : Game Jam
+- name : perso
+  fr : Projet personnel
+  en : Personnal Project
+- name : school
+  fr : Projet scolaire
+  en : School project
+

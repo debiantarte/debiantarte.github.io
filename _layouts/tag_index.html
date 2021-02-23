@@ -3,18 +3,6 @@ layout: page
 ---
 <div class="page-content wc-container">
 
-  <div class="post">
-    <h2 class="post_title">{{page.name}}</h2>
-    <ul>
-      {% assign page_tag=site.tags | where: "tag", page.tag %}
-      {% for project in site.projects %}
-        {% if project.tags contains page_tag.tag %}
-          <li class="archive_list">
-            <a class="archive_list_article_link" href='{{ project.url | relative_url }}'>{{project.title}}</a>
-            <p>{{project.description}}</p>
-          </li>
-        {% endif %}
-      {% endfor %}
-    </ul>
-  </div>
+  {{ content }}
+
 </div>

@@ -1,7 +1,8 @@
 <div class="sidebar ">
     <h2>Recent Projects</h2>
     <ul>
-    {% for project in site.projects limit:5 %}
+    {% assign projects = site.projects | where: "lang", page.lang %}
+    {% for project in projects limit:5 %}
         <li><a href="{{ project.url | relative_url }}">{{ project.title }}</a></li>
     {% endfor %}
     </ul>
