@@ -15,19 +15,20 @@
                   </div>
                   <div class="post-meta">
                     <ul>
-                    {% for stag in site.tags %}
-                      {% if page.tags contains stag.tag and page.lang == stag.lang %}
-                        <li><a href="{{ stag.url }}">{{ stag.name }}</a></li>
+                    {% for tag in site.data.tags %}
+                      {% if page.tags contains tag.name %}
+						{% for tag_lang in tag offset:1 %}
+			       		  {% if tag_lang[0] == page.lang %}
+							{% assign slang = site.data.langs | where: "lang", page.lang | first %}
+			        	    <li><a href="{{ site.url | append: slang.link | append: '/tags.html?tag=' | append: tag.name }}">{{ tag_lang[1] }}</a></li>
+						  {% endif %}
+						{% endfor %}
                       {% endif %}
                     {% endfor %}
                     </ul>
                   </div>
                   <div class="post-content">
-                    {% if page.toc %}
-                      {% include toc.html html=content class='toc' %}
-                    {% endif %}
                     {{ content }}
-                    {% include share.html %}
                   </div>
                 </div>
               </div>
@@ -37,7 +38,6 @@
             </div>
           </div>
         </div>
-        {% include disqus-comments.html %}
       </div>
       {% include footer.html %}
     </div>

@@ -2,7 +2,9 @@
   link: /fr
   lang: fr
   symbol: FR
+  tags: "Projets contenant le tag : "
 - name: english
   link: /en
   lang: en
   symbol: EN
+  tags: "Projects tagged as: "

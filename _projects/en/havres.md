@@ -7,7 +7,7 @@ thumbnail: havres_cover.jpg
 thumbnail-alt: HAVRES
 thumbnail-size: "100%"
 description: My end-of-studies project, made in C# with Unity for the Occulus Quest VR headset.
-tags: VR school-project csharp
+tags: vr school csharp
 ---
 
 # About [HAVRES](https://github.com/pitchinpingouin/HAVRES)

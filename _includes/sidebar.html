@@ -11,10 +11,14 @@
 <div class="sidebar">
     <h2>Tags</h2>
     <ul class="sideBarTags">
-    {% for tag in site.tags %}    
-        {% if tag.lang == page.lang %}
-          <li><a href="{{ tag.url }}">{{ tag.name }}</a></li>
-        {% endif %}
+    {% for tag in site.data.tags %}    
+    	{% for tag_lang in tag offset:1 %}
+		    {% if tag_lang[0] == page.lang %}
+			{% assign slang = site.data.langs | where: "lang", page.lang | first %}
+    	      <li><a href="{{ site.url | append: slang.link | append: '/tags.html?tag=' | append: tag.name }}">{{ tag_lang[1] }}</a></li>
+        	{% endif %}
+		{% endfor %}
     {% endfor %}
     </ul>
 </div>
+

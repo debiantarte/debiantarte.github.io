@@ -8,7 +8,7 @@ thumbnail: feudal_overlords_cover.png
 thumbnail-alt: Feudal Overlords
 thumbnail-size: "65%"
 thumbnail-margin: "auto"
-tags: school-project game cpp
+tags: school game cpp
 ---
 # À propos de [Feudal Overlords](https://github.com/debiantarte/feudal-overlords)
 

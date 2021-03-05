@@ -1,5 +1,9 @@
-{% for item in site.data.navigation %}
-	<a href="{{ item.link }}" class="nav-item nav-link" {% if item.link == page.url %}id="current"{% endif %}> {{ item.name }} </a>
+{% for lang in site.data.langs %}
+	{% if lang.lang == page.lang %}
+		{% for item in site.data.navigation %}
+			<a href="{{ lang.link | append: item.link | relative_url }}" class="nav-item nav-link" {% if item.link == page.url %}id="current"{% endif %}> {{ item.name }} </a>
+		{% endfor %}
+	{% endif %}
 {% endfor %}
 
 <div class="dropdown">

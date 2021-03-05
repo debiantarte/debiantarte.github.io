@@ -1,0 +1,33 @@
+<div class="mb-2 rounded" style="padding: 0px 10px 10px 10px; background-color: #44444F;">
+    <h2 class="post-title">
+        <a href="{{ project.url | relative_url }}">
+            {{ project.title }}
+        </a>
+    </h2>
+
+    <div class="post-descr row">
+        <div class="col-3">
+        {% if project.thumbnail %}
+            {% include post-thumbnail.html image=project.thumbnail alt=project.thumbnail-alt size="100px" margin="10px" %}        
+        {% endif %}
+        </div>
+        <div class="col-6">
+            {{ project.description }}
+        </div>
+    </div>
+
+    <div class="post-meta">
+        <ul>
+            {% for tag in site.data.tags %}
+				{% if project.tags contains tag.name %}
+					{% for tag_lang in tag offset:1 %}
+			       		{% if tag_lang[0] == project.lang %}
+							{% assign slang = site.data.langs | where: "lang", page.lang | first %}
+			        		<li><a href="{{ site.url | append: slang.link | append: '/tags.html?tag=' | append: tag.name }}">{{ tag_lang[1] }}</a></li>
+						{% endif %}
+					{% endfor %}
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+</div>

@@ -7,7 +7,7 @@ ref: attribute
 thumbnail: attribute_cover.png
 thumbnail-alt: "[attribute]"
 thumbnail-size: "200px"
-tags: personal-project game game-jam csharp
+tags: perso game gamejam csharp
 ---
 # About [[attribute]](https://debiantarte.itch.io/attribute)
 

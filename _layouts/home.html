@@ -6,32 +6,5 @@ layout: page
 
 {% assign projects=site.projects | where:"lang", page.lang %}
 {% for project in projects  %}
-<div class="mb-2 rounded" style="padding: 0px 10px 10px 10px; background-color: #44444F;">
-    <h2 class="post-title">
-        <a href="{{ project.url | relative_url }}">
-            {{ project.title }}
-        </a>
-    </h2>
-
-    <div class="post-descr row">
-        <div class="col-3">
-        {% if project.thumbnail %}
-            {% include post-thumbnail.html image=project.thumbnail alt=project.thumbnail-alt size="100px" margin="10px" %}        
-        {% endif %}
-        </div>
-        <div class="col-6">
-            {{ project.description }}
-        </div>
-    </div>
-
-    <div class="post-meta">
-        <ul>
-            {% for stag in site.tags %}
-                    {% if project.lang == stag.lang and project.tags contains stag.tag %}
-                        <li><a href="{{ stag.url }}">{{ stag.name }}</a></li>
-                    {% endif %}
-            {% endfor %}
-        </ul>
-    </div>
-</div>
+{% include post-list.html %}
 {% endfor %}

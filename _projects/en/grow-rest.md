@@ -3,10 +3,10 @@ layout: post
 title: "Grow & Rest"
 lang: en
 ref: grow-and-rest
-tags: personal-project game-jam game csharp
 thumbnail: grow_rest_cover.png
 thumbnail-alt: Grow & Rest
 description: A contemplative god-game made in C# with Unity for the Unijam 2019 game jam.
+tags: perso gamejam game csharp
 ---
 
 # About [Grow & Rest](https://resteam.itch.io/rest-grow)
