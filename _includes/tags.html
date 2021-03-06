@@ -1,5 +1,3 @@
-<div id="tag-index"></div>
-
 <script type="text/javascript">
 	var tag = "";
 	var args = window.location.search.substr(1).split('&');
@@ -15,16 +13,15 @@
 			{% for tag_lang in stag offset:1 %}
 			    {% if tag_lang[0] == page.lang %}
 					{% assign slang = site.data.langs | where: "lang", page.lang | first %}
-					document.getElementById('tag-index').innerHTML += '<h2 class="post_title">{{ slang.tags }}{{ tag_lang[1] }}</h2><ul>';
+					document.getElementsByClassName('card')[0].innerHTML += '<h2 class="post_title">{{ slang.tags }}{{ tag_lang[1] }}</h2><ul>';
 				{% endif %}
 			{% endfor %}
 			{% for project in site.projects %}
 				{% if project.tags contains stag.name and project.lang == page.lang %}
-					//document.getElementById('tag-index').innerHTML += '<li class="archive_list"><a class="archive_list_article_link" href="{{ project.url | relative_url }}">"{{project.title}}"</a><p>"{{project.description}}"</p></li>';
-					document.getElementById('tag-index').innerHTML += '{% capture post-list %}{% include post-list.html %}{% endcapture %}{{ post-list | strip_newlines }}';
-				{% endif %}
+					document.getElementsByClassName('card')[0].innerHTML += `{% include post-list.html %}`;
+$				{% endif %}
 			{% endfor %}
-			document.getElementById('tag-index').innerHTML += '</ul>';
+			document.getElementsByClassName('card')[0].innerHTML += '</ul>';
 		}
 	{% endfor %}
 </script>
