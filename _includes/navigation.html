@@ -1,5 +1,4 @@
 {% assign curr_lang = site.data.langs | where: "lang", page.lang %}
-{{ page.link }}
 {% for lang_item in curr_lang[0] %}
 	{% for nav_item in site.data.navigation %}
 		{% if lang_item[0] == nav_item.name %}
