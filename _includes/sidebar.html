@@ -1,5 +1,6 @@
 <div class="sidebar ">
-    <h2>Recent Projects</h2>
+    {% assign curr_lang = site.data.langs | where: "lang", page.lang %}
+    <h2>{{ curr_lang[0].recent }}</h2>
     <ul>
     {% assign projects = site.projects | where: "lang", page.lang %}
     {% for project in projects limit:5 %}
@@ -15,7 +16,7 @@
     	{% for tag_lang in tag offset:1 %}
 		    {% if tag_lang[0] == page.lang %}
 			{% assign slang = site.data.langs | where: "lang", page.lang | first %}
-    	      <li><a href="{{ site.url | append: slang.link | append: '/tags.html?tag=' | append: tag.name }}">{{ tag_lang[1] }}</a></li>
+    	      <li><a href="{{ site.url | append: slang.link | append: '/tags?tag=' | append: tag.name }}">{{ tag_lang[1] }}</a></li>
         	{% endif %}
 		{% endfor %}
     {% endfor %}

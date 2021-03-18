@@ -1,10 +1,13 @@
-{% for lang in site.data.langs %}
-	{% if lang.lang == page.lang %}
-		{% for item in site.data.navigation %}
-			<a href="{{ lang.link | append: item.link | relative_url }}" class="nav-item nav-link" {% if item.link == page.url %}id="current"{% endif %}> {{ item.name }} </a>
-		{% endfor %}
-	{% endif %}
-{% endfor %}
+{% assign curr_lang = site.data.langs | where: "lang", page.lang %}
+{{ page.link }}
+{% for lang_item in curr_lang[0] %}
+	{% for nav_item in site.data.navigation %}
+		{% if lang_item[0] == nav_item.name %}
+			{% capture localized_link %}{{ curr_lang[0].link | append: nav_item.link | relative_url }}{% endcapture %}
+			<a href="{{ localized_link }}" class="nav-item nav-link" {% if localized_link == page.url %}id="current"{% endif %}>{{ lang_item[1] }}</a>
+		{% endif %}
+	{% endfor %}
+{% endfor %} 
 
 <div class="dropdown">
   {% for lang in site.data.langs %}

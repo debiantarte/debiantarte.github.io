@@ -31,7 +31,7 @@ url: "https://debiantarte.github.io" # the base hostname & protocol for your sit
 
 
 github_username: debiantarte
-
+permalink: pretty
 # Build settings
 markdown: kramdown
 lang: en

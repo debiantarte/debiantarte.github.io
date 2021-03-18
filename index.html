@@ -7,10 +7,10 @@ ref: home
 
 <script type="text/javascript">
     var userLang = navigator.language;
-    window.location.replace("{{ site.url }}" + "/en");
+    window.location.replace("{{ site.url | append: '/en' }}");
     {% for lang in site.data.langs %}
     if (userLang.includes("{{ lang.lang }}")) {
-        window.location.replace("{{ site.url }}" + "{{ lang.link }}");
+        window.location.replace("{{ site.url | append: lang.link }}");
     }    
     {% endfor %}
 </script>

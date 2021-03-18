@@ -3,8 +3,16 @@
   lang: fr
   symbol: FR
   tags: "Projets contenant le tag : "
+  recent: "Projets récents"
+  credit_theme: "Thème basé sur Jekyll Clean Dark par "
+  home: "Accueil"
+  about: "À propos"
 - name: english
   link: /en
   lang: en
   symbol: EN
   tags: "Projects tagged as: "
+  recent: "Recent projects"
+  credit_theme: "Theme based upon Jekyll Clean Dark by "
+  home: "Home"
+  about: "About"

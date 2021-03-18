@@ -1,3 +1,4 @@
 <ul class="list-unstyled">
-    <li>Theme by <a href="https://github.com/streetturtle/jekyll-clean-dark">Pavel Makhov</a></li>
+    {% assign curr_lang = site.data.langs | where: "lang", page.lang %}
+    <li>{{ curr_lang[0].credit_theme }}<a href="https://github.com/streetturtle/jekyll-clean-dark">Pavel Makhov</a></li>
 </ul>
