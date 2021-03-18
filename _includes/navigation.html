@@ -9,7 +9,7 @@
 	{% endfor %}
 {% endfor %} 
 
-<div class="dropdown">
+<div id="language-menu" class="dropdown">
   {% for lang in site.data.langs %}
     {% if lang.lang == page.lang %}
       <a href="{{ lang.link }}" class="nav-item nav-link"> {{ lang.symbol }} </a>
