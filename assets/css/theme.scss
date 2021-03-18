@@ -42,7 +42,7 @@ $nav-background-color: #222;
 //********************************************************
 body {
   color: $font-color;
-  background: $background-color url(pics/background/#{$background-pattern});
+  background: $background-color url(/assets/css/pics/background/#{$background-pattern});
 }
 .card {
   background-color: $post-panel-color;
