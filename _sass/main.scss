@@ -5,3 +5,14 @@
 body {
 	height: 100%;
 }
+
+@media (max-width: 1000px) {
+	#language-menu>a {
+		display: inline-block;
+		margin-right: 1em;
+	}
+
+	#language-menu .dropdown-content {
+		display: inline-block !important;
+	}
+}
