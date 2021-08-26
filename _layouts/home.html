@@ -5,6 +5,6 @@ layout: page
 {{ content }}
 
 {% assign projects=site.projects | where:"lang", page.lang %}
-{% for project in projects  %}
-{% include post-list.html %}
+{% for _project in projects  %}
+{% include post-list.html project=_project %}
 {% endfor %}

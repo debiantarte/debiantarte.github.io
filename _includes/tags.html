@@ -16,10 +16,10 @@
 					document.getElementsByClassName('card')[0].innerHTML += '<h2 class="post_title">{{ slang.tags }}{{ tag_lang[1] }}</h2><ul>';
 				{% endif %}
 			{% endfor %}
-			{% for project in site.projects %}
-				{% if project.tags contains stag.name and project.lang == page.lang %}
-					document.getElementsByClassName('card')[0].innerHTML += `{% include post-list.html %}`;
-$				{% endif %}
+			{% for sproject in site.projects %}
+				{% if sproject.tags contains stag.name and sproject.lang == page.lang %}
+					document.getElementsByClassName('card')[0].innerHTML += `{% include post-list.html project= sproject %}`;
+				{% endif %}
 			{% endfor %}
 			document.getElementsByClassName('card')[0].innerHTML += '</ul>';
 		}
