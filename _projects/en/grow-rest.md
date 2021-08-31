@@ -5,7 +5,7 @@ lang: en
 ref: grow-and-rest
 thumbnail: grow_rest_cover.png
 thumbnail-alt: Grow & Rest
-description: A contemplative god-game made in C# with Unity for the Unijam 2019 game jam.
+description: desc/en/grow-rest.html
 tags: perso gamejam game csharp
 ---
 

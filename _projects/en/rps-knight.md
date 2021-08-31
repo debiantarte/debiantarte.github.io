@@ -5,7 +5,7 @@ lang: en
 ref: rps-knight
 thumbnail: rps-knight-cover.png
 thumbnail-alt: Knight of Rock&Paper&Scissors
-description: A puzzle/dungeon-crawler game made during the Weekly Game Jam 154
+description: desc/en/rps-knight.html
 tags: perso gamejam csharp game
 ---
 

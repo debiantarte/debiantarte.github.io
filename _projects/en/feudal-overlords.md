@@ -1,7 +1,7 @@
 ---
 title: Feudal Overlords
 layout: post
-description: My very first playable game, as a school project for a C++ and computer science class.
+description: desc/en/feudal-overlords.html
 lang: en
 ref: feudal-overlords
 thumbnail: feudal_overlords_cover.png

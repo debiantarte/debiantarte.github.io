@@ -5,7 +5,7 @@ lang: fr
 ref: rps-knight
 thumbnail: rps-knight-cover.png
 thumbnail-alt: Knight of Rock&Paper&Scissors
-description: Un jeu de puzzle/exploration de donjon réalisé pour la Weekly Game Jam n°154
+description: desc/fr/rps-knight.html
 tags: perso gamejam csharp game
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Feudal Overlords
 layout: post
-description: Mon premier jeu jouable, fait pour un cours de programmation en C++
+description: desc/fr/feudal-overlords.html
 lang: fr
 ref: feudal-overlords
 thumbnail: feudal_overlords_cover.png

@@ -1,7 +1,7 @@
 ---
 title: "[attribute]"
 layout: post
-description: Mon premier jeu de game jam jouable, fait seul et en C# avec Unity.
+description: desc/fr/attribute.html
 lang: fr
 ref: attribute
 thumbnail: attribute_cover.png

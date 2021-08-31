@@ -12,7 +12,9 @@
         {% endif %}
         </div>
         <div class="col-6">
-            {{ include.project.description }}
+			{% if include.project.description %}
+	            {% include {{ include.project.description }} %}
+			{% endif %}
         </div>
     </div>
 

@@ -6,7 +6,7 @@ ref: havres
 thumbnail: havres_cover.jpg
 thumbnail-alt: HAVRES
 thumbnail-size: "100%"
-description: Mon projet de fin d'études, en réalité virtuelle, destiné aux patients en hospitalisation longue
+description: desc/fr/havres.html
 tags: vr school csharp
 ---
 
