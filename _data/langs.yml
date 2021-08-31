@@ -7,6 +7,7 @@
   credit_theme: "Thème basé sur Jekyll Clean Dark par "
   home: "Accueil"
   about: "À propos"
+  glossary: "Glossaire"
 - name: english
   link: /en
   lang: en
@@ -16,3 +17,4 @@
   credit_theme: "Theme based upon Jekyll Clean Dark by "
   home: "Home"
   about: "About"
+  glossary: "Glossary"

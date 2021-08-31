@@ -1,0 +1,23 @@
+<script type="text/javascript">
+	var word = "";
+	var args = window.location.search.substr(1).split('&');
+	for (var i = 0; i < args.length; i++) {
+		var tmp = args[i].split('=');
+		if (tmp[0] == "filter") {
+			word = tmp[1];
+		}
+	} 
+
+	{% for _word in site.data.words %}
+		if (word == "{{ _word.name }}" || word=="") {
+			{% for word_lang in _word offset:1 %}
+			    {% if word_lang[0] == page.lang %}
+					{% assign _lang = site.data.langs | where: "lang", page.lang | first %}
+					document.getElementsByClassName('card')[0].innerHTML += '<h2 class="post_title">{{ word_lang[1][0] }}</h2>';
+					document.getElementsByClassName('card')[0].innerHTML += `<p>{{ word_lang[1][1] }}</p>`;
+					document.getElementsByClassName('card')[0].innerHTML += '<p><a href="{{ word_lang[1][2] }}">source</a></p>';
+			    {% endif %}
+			{% endfor %}
+		}
+	{% endfor %}
+</script>
