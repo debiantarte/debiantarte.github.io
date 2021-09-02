@@ -13,9 +13,12 @@
 			{% for word_lang in _word offset:1 %}
 			    {% if word_lang[0] == page.lang %}
 					{% assign _lang = site.data.langs | where: "lang", page.lang | first %}
-					document.getElementsByClassName('card')[0].innerHTML += '<h2 class="post_title">{{ word_lang[1][0] }}</h2>';
-					document.getElementsByClassName('card')[0].innerHTML += `<p>{{ word_lang[1][1] }}</p>`;
-					document.getElementsByClassName('card')[0].innerHTML += '<p><a href="{{ word_lang[1][2] }}">source</a></p>';
+					var word_desc = `<div class="mb-2 rounded" style="padding: 0px 10px 10px 10px; background-color: 44444F;">
+									 <h2 class="post_title">{{ word_lang[1][0] }}</h2>
+									 <p>{{ word_lang[1][1] }}</p>
+									 <p><a href="{{ word_lang[1][2] }}">source</a></p>
+									 </div>`;									 
+					document.getElementsByClassName('card')[0].innerHTML += word_desc;
 			    {% endif %}
 			{% endfor %}
 		}
