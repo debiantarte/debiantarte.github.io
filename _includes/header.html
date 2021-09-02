@@ -16,7 +16,14 @@
     <link href="{{ '/assets/css/syntax.css' | relative_url }}" rel="stylesheet">
     <link href="/assets/css/styles.css" rel="stylesheet">
 	<script>$(function () {
-				$('[data-toggle="tooltip"]').tooltip()
+				var isTouchDevice =
+					(('ontouchstart' in window) ||
+					(navigator.MaxTouchPoints > 0) ||
+					(navigator.msMaxTouchPoints > 0));
+				$('[data-toggle="tooltip"]').tooltip();
+				if (isTouchDevice) {
+					$('[data-toggle="tooltip"]').tooltip('disable');
+				}
 			})
 	</script>    
 </head>
