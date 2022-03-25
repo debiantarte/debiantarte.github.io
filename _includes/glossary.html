@@ -1,13 +1,14 @@
 <script type="text/javascript">
 	var word = "";
 	var args = window.location.search.substr(1).split('&');
+	console.log(args);
 	for (var i = 0; i < args.length; i++) {
 		var tmp = args[i].split('=');
 		if (tmp[0] == "filter") {
 			word = tmp[1];
 		}
 	} 
-
+	console.log(word);
 	{% for _word in site.data.words %}
 		if (word == "{{ _word.name }}" || word=="") {
 			{% for word_lang in _word offset:1 %}

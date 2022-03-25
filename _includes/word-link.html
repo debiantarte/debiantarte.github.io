@@ -1,1 +1,6 @@
-<span><a href="{{ include.link }}" data-toggle="tooltip" data-html="true" title="{{ include.tooltip }}">{{ include.text }}</a></span>
+<script>
+console.log("{{include.word}}");
+console.log("{{page.lang}}");
+</script>
+
+<span><a href="{{ site.url | append: '/' | append: page.lang | append: '/glossary?filter=' | append: include.word }}" data-toggle="tooltip" data-html="true" title="{{ include.tooltip }}">{{ include.text }}</a></span>

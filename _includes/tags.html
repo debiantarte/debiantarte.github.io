@@ -7,7 +7,7 @@
 			tag = tmp[1];
 		}
 	} 
-
+	
 	{% for stag in site.data.tags %}
 		if (tag == "{{ stag.name }}") {
 			{% for tag_lang in stag offset:1 %}
