@@ -1,7 +1,5 @@
 ---
 ---
-@use "main";
-
 @mixin font-size($size) {
   font-size: $size;
   font-size: calculateRem($size);
@@ -474,3 +472,4 @@ table.inner-borders {
   }
 }
 
+@import "main";

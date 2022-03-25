@@ -16,3 +16,14 @@ body {
 		display: inline-block !important;
 	}
 }
+
+.glossary-entry, .glossary-entry:visited, .glossary-entry:active, .glossary-entry:focus {
+	color: $font-color;	
+	text-decoration-line: underline;
+	text-decoration-style: dotted;	
+	cursor: help;
+}
+
+.glossary-entry:hover {
+	text-decoration-style: solid;
+}
